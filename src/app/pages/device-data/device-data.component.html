@@ -1,0 +1,33 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="container">
+  <table class="table">
+    <thead>
+        <tr>
+            <th>TelemetryId</th>
+            <th>DeviceId</th>
+            <th>EnqueuedTime</th>
+            <th>temperature</th> 
+            <th>humidity</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let teledata of teledata">
+            <td>{{teledata.telemetryid}}</td>
+            <td>{{teledata.deviceid}}</td>
+            <td>{{teledata.enqueuedtime}}</td>
+            <td>{{teledata.temperature}}</td>
+            <td>{{teledata.humidity}}</td>
+        </tr>
+    </tbody>
+ </table>
+  </div>

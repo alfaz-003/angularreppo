@@ -1,0 +1,76 @@
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+ 
+    </div>
+  </div>
+</div>
+ <br>
+ <br>
+
+
+<table id="myTable">
+  <tr>
+    <th>Device_id</th>
+    <th>Device_Name</th>
+    <th>status</th>
+   
+    
+  </tr>
+  <tr  *ngFor="let products of products">
+      <td>{{products.deviceid}}</td>
+      <td>{{products.devicename}}</td>
+      <td>{{<products class="deviceHke@2016">Hatke@2016
+        Hatke@2016
+      </products>status}}</td>
+      <td></td>
+      <td>
+        <button b2 class="btn btn-primary" (click)="onPut(products)">Update</button>
+       
+    <button b1 class="btn btn-primary" (click)="onDelete(products)">Delete</button>
+   
+   
+  
+
+      </td>
+     
+     
+  </tr>
+
+  
+ 
+</table>
+
+<div class="add_new">
+  <form >
+    <label>ADD</label>
+    <br>
+    <label>Employee_name</label>
+    <input type="text" name="name" id="employee_name"  [(ngModel)]="employee_name">
+    <br>
+    <label>Employee Role</label>
+    <input type="text" name="role" id="employee_role"  [(ngModel)]="employee_role">
+    <br>
+    <input type="submit" (click)="Add(employee_id,employee_name,employee_role)">
+
+    
+  </form>
+  <br>
+  <br>
+
+
+  <form>
+    <label>Update</label>
+    <br>
+    <label>Employee_ID</label>
+    <br>
+    <input type="text" name="name" id="u_id"  [(ngModel)]="u_id">
+    <br>
+    <label>Employee Name</label><br>
+    <input type="text" name="role" id="u_name"  [(ngModel)]="u_name">
+    <br>
+    <input type="submit" (click)="Update(u_id,u_name)">
+
+  </form>
+</div>
