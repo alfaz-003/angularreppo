@@ -26,25 +26,19 @@ export class IconsComponent  {
 
   }
   onDelete(products){
-    console.log(products.empid);
-    this.httpClient.delete(this.url+"/delete/id/" + products.empid)
+    console.log(products.deviceid);
+    this.httpClient.delete(this.url+"/delete/"+products.deviceid,{headers:headerlocal})
     .subscribe(response => {
-      let index = this.products.indexOf(products) ;
-      this.products.splice(index,1);
+    
       console.log(response);
     });
   }
 
-  Add(employee_id,employee_name,employee_role){
-    this.posts={empid:employee_id,empname:employee_name,emprole:employee_role}
+  Add(devicename,devicestatus){
+    this.posts={devicename:devicename,status:devicestatus}
     let body=JSON.stringify(this.posts)
     console.log(this.posts,"Successfull",body);
-    this.httpClient.post(this.url+"/create",body,{ headers :new HttpHeaders
-      (
-      {'Content-Type':'application/json'},
-      )
-    
-    })
+    this.httpClient.post(this.url+"/create",body,{headers:headerlocal})
     .subscribe(response => {
       console.log("sucessful",Response);
     });
@@ -52,16 +46,11 @@ export class IconsComponent  {
 
   }
 
-  Update(u_id,u_name){
-    this.posts={empname:u_name}
+  Update(deviceid,devicename,devicestatus){
+    this.posts={devicename:devicename,devicestatus:devicestatus}
     let body=JSON.stringify(this.posts)
     console.log(this.posts,"Successfull",body);
-    this.httpClient.put(this.url+"/update/id/"+u_id,body,{ headers :new HttpHeaders
-      (
-      {'Content-Type':'application/json'},
-      )
-    
-    })
+    this.httpClient.put(this.url+"/update/"+deviceid,body,{headers:headerlocal})
     .subscribe(response => {
       console.log("sucessful",Response);
     });

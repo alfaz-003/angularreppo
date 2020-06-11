@@ -12,7 +12,7 @@
 
 <table id="myTable">
   <tr>
-    <th>Device_id</th>
+    <th>Device Id</th>
     <th>Device_Name</th>
     <th>status</th>
    
@@ -21,19 +21,17 @@
   <tr  *ngFor="let products of products">
       <td>{{products.deviceid}}</td>
       <td>{{products.devicename}}</td>
-      <td>{{<products class="deviceHke@2016">Hatke@2016
-        Hatke@2016
-      </products>status}}</td>
-      <td></td>
-      <td>
+      <td>{{products.status}}</td>
+      <button b1 class="btn btn-primary" (click)="onDelete(products)">Delete</button>
+    <!--- <td>
         <button b2 class="btn btn-primary" (click)="onPut(products)">Update</button>
        
-    <button b1 class="btn btn-primary" (click)="onDelete(products)">Delete</button>
+   
    
    
   
 
-      </td>
+      </td>  -->
      
      
   </tr>
@@ -44,15 +42,17 @@
 
 <div class="add_new">
   <form >
-    <label>ADD</label>
+    <label>ADD DEVICE</label>
     <br>
-    <label>Employee_name</label>
-    <input type="text" name="name" id="employee_name"  [(ngModel)]="employee_name">
+   <br>
+    <label>Device Name</label>
+    <input type="text" name="devicename" id="devicename"  [(ngModel)]="devicename">
     <br>
-    <label>Employee Role</label>
-    <input type="text" name="role" id="employee_role"  [(ngModel)]="employee_role">
     <br>
-    <input type="submit" (click)="Add(employee_id,employee_name,employee_role)">
+    <label>Device Status</label>
+    <input type="text" name="devicestatus" id="devicestatus"  [(ngModel)]="devicestatus">
+    <br>
+    <input type="submit" (click)="Add(devicename,devicestatus)">
 
     
   </form>
@@ -63,14 +63,18 @@
   <form>
     <label>Update</label>
     <br>
-    <label>Employee_ID</label>
+    <label>Device Id</label>
     <br>
-    <input type="text" name="name" id="u_id"  [(ngModel)]="u_id">
+    <input type="text" name="deviceid" id="deviceid"  [(ngModel)]="deviceid">
     <br>
-    <label>Employee Name</label><br>
-    <input type="text" name="role" id="u_name"  [(ngModel)]="u_name">
+    <label>Device Name</label>
+    <input type="text" name="devicename1" id="devicename"  [(ngModel)]="devicename">
     <br>
-    <input type="submit" (click)="Update(u_id,u_name)">
+    <br>
+    <label>Device Status</label>
+    <input type="text" name="devicestatus1" id="devicestatus"  [(ngModel)]="devicestatus">
+    <br>
+    <input type="submit" (click)="Update(deviceid,devicename,devicestatus)">
 
   </form>
 </div>
