@@ -16,6 +16,8 @@ import { NewComponent } from './pages/new/new.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { DevicedataService } from './service/devicedata.service';
 import { DeviceDataComponent } from './pages/device-data/device-data.component';
+import {ChartsModule} from 'ng2-charts'
+import { CommonModule } from '@angular/common';
 
 // import { CommonModule } from '@angular/common';
 
@@ -23,6 +25,7 @@ import { DeviceDataComponent } from './pages/device-data/device-data.component';
 
 @NgModule({
   imports: [
+    CommonModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
@@ -31,13 +34,15 @@ import { DeviceDataComponent } from './pages/device-data/device-data.component';
     RouterModule,
     AppRoutingModule,
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
     AuthLayoutComponent,
     NewComponent,
+   
     
   ],
   providers: [

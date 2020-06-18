@@ -5,12 +5,105 @@
 
 
 
-
+    
       
  
     </div>
   </div>
 </div>
+<br>
+<br>
+<br>
+<h3> TEMP v/s TIMESTAMP</h3>
+<br>
+
+
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas">{{ Linechart }}</canvas>    
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas4">{{ Linehumchart }}</canvas>    
+</div>
+
+
+
+<br>
+<br>
+<br>
+<div class="add_new">
+  <form >
+    <label>Between Months</label>
+    <br>
+   <br>
+    <label>Start Date</label>
+    <input type="datetime-local" name="startdate" id="startdate"  [(ngModel)]="startdate">
+    <br>
+    <br>
+    <label>End Date</label>
+    <input type="datetime-local" name="enddate" id="enddate"  [(ngModel)]="enddate">
+    <br>
+    <input type="submit" (click)="dateBetweenDeviceData(startdate,enddate)">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+<br>
+<br>
+<br>
+
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas2">{{ tempavgchart }}</canvas>    
+</div>
+  
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas3">{{ humavgchart }}</canvas>    
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas5">{{ tempdomute }}</canvas>    
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+  <canvas id="canvas6">{{ donughthum }}</canvas>    
+</div>
+
+  </form>
 
 
 

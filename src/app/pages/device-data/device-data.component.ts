@@ -17,6 +17,17 @@ export class tdata {
 
   }
 }
+export class chrt {
+  constructor(
+  public count,
+  public days,
+  public temp,
+  public hum
+  )
+  {
+
+  }
+}
 
 @Component({
   selector: 'app-device-data',
@@ -30,28 +41,14 @@ export class tdata {
 
 export class DeviceDataComponent {
    
-  teledata: tdata[]
+  teledata:any;
   constructor(private httpClient: HttpClient,
     private deviceDataService:DevicedataService) { 
     
-    /*
-    var header = {
-      headers: new HttpHeaders()
-      .set('Authorization',  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGZhekAxMjMiLCJleHAiOjE1OTE1Nzk0MzAsImlhdCI6MTU5MTU0MzQzMH0.xJenlBcjQ19RLujTqC6hj5x5kRF1wJKp1Sj97IDW3oM')
-      .set('Content-Type', 'application/x-www-form-urlencoded')
-      
-    }*/
-    // const httpOptions = {
-    //   headers: new HttpHeaders({ 
-    //   'Authorization':'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGZhekAxMjMiLCJleHAiOjE1OTE2NTM5ODYsImlhdCI6MTU5MTYxNzk4Nn0.I9gWkmagBRtvy9Y4R_RaJnUMLnIB9q4MUkmtv_N6ukY'})
-    // };
-
-    // console.log(httpOptions);
-    console.log(headerlocal)
     this.deviceDataService.getAllTelemetryDevice().subscribe(
       data => {
          this.teledata = data
-        console.log(this.teledata)
+        //console.log(this.teledata)
       },
       error => {
         console.log(error)
@@ -61,8 +58,10 @@ export class DeviceDataComponent {
     
 
 
+
   }
 
+  
 
  
 

@@ -12,4 +12,8 @@ export class DevicedataService {
   getAllTelemetryDevice(){
     return this.httpClient.get<tdata[]>(`${API_URL}/api/telemetry/all`,{headers:headerlocal} )
   }
+
+  getAllChartDevice(){
+    return this.httpClient.get<tdata[]>(`${API_URL}/api/telemetry/chart`,{headers:headerlocal} )
+  }
 }
