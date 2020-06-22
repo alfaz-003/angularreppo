@@ -30,6 +30,7 @@ export class RegisterComponent implements OnInit {
     .subscribe(response => {
       console.log("sucessful",Response);
     });
+    alert("User Successfully Registered ");
 
 
 }

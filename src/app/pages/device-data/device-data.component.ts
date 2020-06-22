@@ -6,6 +6,8 @@ import { catchError, retry } from 'rxjs/operators';
 import {headerlocal, PROXYURL, API_URL} from 'src/app/app.constant'
 import { DevicedataService } from 'src/app/service/devicedata.service';
 import  { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 export class tdata {
   constructor(
   public telemetryid,
@@ -41,9 +43,13 @@ export class chrt {
 
 export class DeviceDataComponent {
    
-  teledata:any;
+  teledata:Array<any>;
+  totalRecords : Number
+  page : Number=1
+
   constructor(private httpClient: HttpClient,
     private deviceDataService:DevicedataService) { 
+      this.teledata = new Array<any>()
     
     this.deviceDataService.getAllTelemetryDevice().subscribe(
       data => {

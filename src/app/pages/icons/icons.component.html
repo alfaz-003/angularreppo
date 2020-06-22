@@ -9,12 +9,13 @@
  <br>
  <br>
 
-
+<div class="a">
 <table id="myTable" >
   <tr>
-    <th>Device Id</th>
-    <th>Device_Name</th>
-    <th>status</th>
+    <th>DEVICE ID</th>
+    <th>DEVICE</th>
+    <th>STATUS</th>
+    <th>DELETE</th>
    
     
   </tr>
@@ -22,80 +23,108 @@
       <td>{{products.deviceid}}</td>
       <td>{{products.devicename}}</td>
       <td>{{products.status}}</td>
-      <button b1 class="btn btn-primary" (click)="onDelete(products)">Delete</button>
-    <!--- <td>
-        <button b2 class="btn btn-primary" (click)="onPut(products)">Update</button>
-       
-   
-   
-   
-  
 
-      </td>  -->
-     
-     
+     <td> <button type="button" class="btn btn-default btn-sm" (click)="onDelete(products)">
+      <span class="ni ni-fat-remove"></span> 
+    </button></td>
   </tr>
-
-  
- 
 </table>
-
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-<div class="add_new">
-  <form >
-    <label>ADD DEVICE</label>
-    <br>
-   <br>
-    <label>Device Name</label>
-    <input type="text" name="devicename" id="devicename"  [(ngModel)]="devicename">
-    <br>
-    <br>
-    <label>Device Status</label>
-    <input type="text" name="devicestatus" id="devicestatus"  [(ngModel)]="devicestatus">
-    <br>
-    <input type="submit" (click)="Add(devicename,devicestatus)">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-
-    
-  </form>
-  <br>
-  <br>
-  <br>
-  <br>
+</div>
 
 
-  <form>
-    <label>Update</label>
-    <br>
-    <br>
-    <label>Device Id</label>
-    
-    <input type="text" name="deviceid" id="deviceid"  [(ngModel)]="deviceid">
-    <br>
-    <br>
-    <label>Device Name</label>
-    <input type="text" name="devicename1" id="devicename"  [(ngModel)]="devicename">
-    <br>
-    <br>
-    <label>Device Status</label>
-    <input type="text" name="devicestatus1" id="devicestatus"  [(ngModel)]="devicestatus">
-    <br>
-    <input type="submit" (click)="Update(deviceid,devicename,devicestatus)">
 
-  </form>
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="places-buttons">
+          <h3 class="card-title">ADD DEVICE</h3>
+          <div>
+            <div class="card-body">
+              <form id="add">
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>DEVICE NAME</label>
+                      <input type="text" class="form-control"  name="devicename" id="devicename" placeholder="device name" [(ngModel)]="devicename">
+                    </div>
+                  </div>
+                  <div class="col-md-3 px-1">
+                    <div class="form-group">
+                      <label>DEVICE STATUS</label>
+                      <input type="text" class="form-control" name="devicestatus" id="devicestatus" placeholder="device status" [(ngModel)]="devicestatus" >
+                    </div>
+                  </div>
+
+                
+            
+                </div>
+                <div class="row">
+                  <div class="update ml-auto mr-auto">
+                    <button type="submit"  class="btn btn-primary btn-round" (click)="Add(devicename,devicestatus)">ADD DEVICE</button>
+                  </div>
+                </div>
+              
+              </form>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="places-buttons">
+          <h3 class="card-title">UPDATE DEVICE</h3>
+          <div>
+            <div class="card-body">
+              <form id="update">
+                <div class="row">
+                  <div class="col-md-5 pr-1">
+                    <div class="form-group">
+                      <label>ID TO BE UPDATED</label>
+                      <input type="text" class="form-control"  name="deviceid" id="deviceid"  placeholder="Id" [(ngModel)]="deviceid">
+                    </div>
+                  </div>
+                  <div class="col-md-3 px-1">
+                    <div class="form-group">
+                      <label>UPDATE NAME</label>
+                      <input type="text" class="form-control" name="devicename" id="devicename" placeholder="name"  [(ngModel)]="devicename" >
+                    </div>
+                  </div>
+
+                  <div class="col-md-3 px-1">
+                    <div class="form-group">
+                      <label>UPDATE STATUS</label>
+                      <input type="text" class="form-control" placeholder="status"  name="devicestatus" id="devicestatus"  [(ngModel)]="devicestatus">
+                    </div>
+                  </div>
+            
+                </div>
+                <div class="row">
+                  <div class="update ml-auto mr-auto">
+                    <button type="submit"  class="btn btn-primary btn-round" (click)="Update(deviceid,devicename,devicestatus)">UPDATE DEVICE</button>
+                  </div>
+                </div>
+              
+              </form>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

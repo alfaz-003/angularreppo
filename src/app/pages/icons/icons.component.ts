@@ -14,6 +14,7 @@ export class IconsComponent  {
   posts:any;
   products;
  url:string="http://localhost:8080/api/device";
+ devicestatus
  
   constructor(private httpClient: HttpClient) { 
     
@@ -58,7 +59,9 @@ export class IconsComponent  {
 
   }
 
+  
+}
 
   
   
-}
+

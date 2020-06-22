@@ -35,6 +35,7 @@ export class NavbarComponent implements OnInit {
   logout() {
     console.log("Logout Called")
     sessionStorage.removeItem('token')
+    alert("Logged Out Successfully");
   }
 
 }

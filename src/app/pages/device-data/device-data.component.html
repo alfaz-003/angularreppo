@@ -21,7 +21,10 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let teledata of teledata">
+        <tr *ngFor="let teledata of teledata | paginate: { id: 'listing_pagination',
+        itemsPerPage: 10,
+        currentPage: page,
+        totalItems: totalRecords }">
          
             <td>{{teledata.telemetryid}}</td>
             <td>{{teledata.deviceid}}</td>
@@ -31,4 +34,9 @@
         </tr>
     </tbody>
  </table>
+ <br>
+ <div>
+  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+</div>
+ 
   </div>

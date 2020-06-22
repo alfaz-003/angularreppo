@@ -13,6 +13,8 @@ import { UserProfileComponent } from '../../pages/user-profile/user-profile.comp
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DeviceDataComponent } from 'src/app/pages/device-data/device-data.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -23,8 +25,8 @@ import { DeviceDataComponent } from 'src/app/pages/device-data/device-data.compo
     HttpClientModule,
     NgbModule,
     ClipboardModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    NgxPaginationModule  ],
   declarations: [
     DashboardComponent,
     UserProfileComponent,
