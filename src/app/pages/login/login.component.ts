@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
   }
-
+ 
   chekUsers(username,password){
     this.posts={username:username,password:password}
     let body=JSON.stringify(this.posts)
@@ -38,8 +38,8 @@ export class LoginComponent implements OnInit, OnDestroy {
      LoginComponent.output= data;
     });
 
-
 }
+
 
   public static getToken()
   {

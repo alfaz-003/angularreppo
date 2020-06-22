@@ -8,16 +8,15 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { DeviceDataComponent } from 'src/app/pages/device-data/device-data.component';
 import { LoginComponent } from 'src/app/pages/login/login.component';
 import { RegisterComponent } from 'src/app/pages/register/register.component';
+import { RouteGuardService } from 'src/app/service/route-guard.service';
 
 export const AdminLayoutRoutes: Routes = [
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'tables',         component: TablesComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'device-data',    component: DeviceDataComponent },
+    { path: 'dashboard',      component: DashboardComponent},
+    { path: 'user-profile',   component: UserProfileComponent, canActivate: [RouteGuardService]},
+    { path: 'tables',         component: TablesComponent, canActivate: [RouteGuardService]},
+    { path: 'icons',          component: IconsComponent, canActivate: [RouteGuardService]},
+    { path: 'maps',           component: MapsComponent, canActivate: [RouteGuardService]},
+    { path: 'device-data',    component: DeviceDataComponent, canActivate: [RouteGuardService]},
     { path: '/login',         component:LoginComponent},
-    { path: '/register',         component:RegisterComponent}
-
- 
+    { path: '/register',      component:RegisterComponent}
 ];

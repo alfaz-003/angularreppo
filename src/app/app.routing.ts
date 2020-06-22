@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { RouteGuardService } from './service/route-guard.service';
 
 
 const routes: Routes =[
@@ -12,6 +13,7 @@ const routes: Routes =[
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
+    
   }, {
     path: '',
     component: AdminLayoutComponent,
@@ -23,6 +25,7 @@ const routes: Routes =[
     ]
   }, {
     path: '',
+    // canActivate: [RouteGuardService],
     component: AuthLayoutComponent,
     children: [
       {
