@@ -10,8 +10,8 @@
 <br>
 
 <div class="container">
-  <table class="table">
-    <thead>
+  <table class="table table-striped">
+    <thead class="thead-light">
         <tr>
             <th>TelemetryId</th>
             <th>DeviceId</th>
@@ -36,7 +36,14 @@
  </table>
  <br>
  <div>
-  <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+  <pagination-controls class="a"  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
 </div>
  
   </div>
+
+
+
+
+
+
+  

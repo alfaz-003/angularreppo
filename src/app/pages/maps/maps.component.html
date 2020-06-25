@@ -29,7 +29,6 @@
 <br>
 <br>
 <br>
-<br><br>
 
 <div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
   <canvas id="canvas4">{{ Linehumchart }}</canvas>    
@@ -40,70 +39,106 @@
 <br>
 <br>
 <br>
-<div class="add_new">
-  <form >
-    <label>Between Months</label>
-    <br>
-   <br>
-    <label>Start Date</label>
-    <input type="datetime-local" name="startdate" id="startdate"  [(ngModel)]="startdate">
-    <br>
-    <br>
-    <label>End Date</label>
-    <input type="datetime-local" name="enddate" id="enddate"  [(ngModel)]="enddate">
-    <br>
-    <input type="submit" (click)="dateBetweenDeviceData(startdate,enddate)">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-<br>
-<br>
-<br>
 
-<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
-  <canvas id="canvas2">{{ tempavgchart }}</canvas>    
-</div>
+
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="places-buttons">
+            <h3 class="card-title">SELECT SLOT</h3>
+            <div>
+              <div class="card-body">
+                <form id="add">
+                  <div class="row">
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                     
+                        <label>Start Date</label>
+                        <input class="form-control" type="date" name="startdate" id="startdate"  [(ngModel)]="startdate">
+                      </div>
+                    </div>
+                  
   
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        
+                        <label>End Date</label>
+                        <input class="form-control"  type="date" name="enddate" id="enddate"  [(ngModel)]="enddate">
+                      </div>
+                    </div>
+  
+                  
+              
+                  </div>
+                  <div class="row">
+                    <div class="update ml-auto mr-auto">
+                      <button type="submit"  class="btn btn-primary btn-round" (click)="dateBetweenDeviceData(startdate,enddate)">Show</button>
+                      <br>
+                      
+                      <div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+                        <canvas id="canvas2">{{ tempavgchart }}</canvas>    
+                      </div>
+                        
+                      
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      
+                      
+                      <div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+                        <canvas id="canvas3">{{ humavgchart }}</canvas>    
+                      </div>
+                      
+                      
+                      
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br><br>
+                      
+                      <div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+                        <canvas id="canvas5">{{ tempdomute }}</canvas>    
+                      </div>
+                      
+                      
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                      <br><br>
+                      
+                      <div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
+                        <canvas id="canvas6">{{ donughthum }}</canvas>    
+                      </div>
+                      
+                      
+                    </div>
+                  </div>
+                
+                </form>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
-  <canvas id="canvas3">{{ humavgchart }}</canvas>    
-</div>
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-
-<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
-  <canvas id="canvas5">{{ tempdomute }}</canvas>    
-</div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-
-<div class="chart-container" style="position: relative; height:60vh; width:70vw;">    
-  <canvas id="canvas6">{{ donughthum }}</canvas>    
-</div>
-
-  </form>
-
-
-
+  
