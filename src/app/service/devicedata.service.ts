@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {tdata} from 'src/app/pages/device-data/device-data.component'
-import { PROXYURL, API_URL, headerlocal } from '../app.constant';
+import { PROXYURL, API_URL, headerlocal} from '../app.constant';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,5 +15,9 @@ export class DevicedataService {
 
   getAllChartDevice(){
     return this.httpClient.get<tdata[]>(`${API_URL}/api/telemetry/chart`,{headers:headerlocal} )
+  }
+  isUserLoggedIn() {    
+    let user = sessionStorage.getItem("token")
+    return !(user === null)
   }
 }
