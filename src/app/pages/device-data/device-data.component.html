@@ -8,21 +8,31 @@
 </div>
 <br>
 <br>
+<div class="container-fluid mt--7">
 
-<div class="container">
-  <table class="table table-striped">
-    <thead class="thead-light">
-        <tr>
-            <th>TelemetryId</th>
-            <th>DeviceId</th>
-            <th>EnqueuedTime</th>
-            <th>temperature</th> 
-            <th>humidity</th>
-        </tr>
-    </thead>
-    <tbody>
+  <!-- Table -->
+  
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <h3 class="mb-0">TELEMETRY DATA</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">TELEMETRY ID</th>
+                <th scope="col">DEVICE ID</th>
+                <th scope="col">ENQUEUED TIME</th>
+                <th scope="col">TEMPERATURE</th>
+                <th scope="col">HUMIDITY</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
         <tr *ngFor="let teledata of teledata | paginate: { id: 'listing_pagination',
-        itemsPerPage: 10,
+        itemsPerPage: 7,
         currentPage: page,
         totalItems: totalRecords }">
          
@@ -34,6 +44,7 @@
         </tr>
     </tbody>
  </table>
+ <br>
  <br>
  <div>
   <pagination-controls class="a"  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>

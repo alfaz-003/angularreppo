@@ -9,8 +9,15 @@
  <br>
  <br>
 
-<div class="a">
-<table id="myTable" >
+ <div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <h3 class="mb-0">DEVICE DATA</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
   <tr>
     <th>DEVICE ID</th>
     <th>DEVICE</th>
@@ -19,17 +26,21 @@
    
     
   </tr>
-  <tr  *ngFor="let products of products">
+  <tr   *ngFor="let products of products | paginate: { id: 'listing_pagination',
+  itemsPerPage: 5,
+  currentPage: page,
+  totalItems: totalRecords }">
       <td>{{products.deviceid}}</td>
       <td>{{products.devicename}}</td>
       <td>{{products.status}}</td>
 
-     <td> <button type="button" class="btn btn-default btn-sm" (click)="onDelete(products)">
-      <span class="ni ni-fat-remove"></span> 
+     <td> <button type="button" class="btn btn-default btn-sm"  (click)="onDelete(products)">
+      <span class="fa fa-trash" aria-hidden="true"></span> 
     </button></td>
   </tr>
 </table>
 </div>
+<pagination-controls class="a"  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
 
 
 
@@ -128,3 +139,7 @@
     </div>
   </div>
 </div>
+
+
+
+
