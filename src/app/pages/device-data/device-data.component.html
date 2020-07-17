@@ -11,9 +11,9 @@
 <div class="container-fluid mt--7">
 
   <!-- Table -->
-  
+
   <div class="row">
-    <div class="col">
+    <div class="col">F
       <div class="card shadow">
         <div class="card-header border-0">
           <h3 class="mb-0">TELEMETRY DATA</h3>
@@ -31,30 +31,24 @@
               </tr>
             </thead>
             <tbody>
-        <tr *ngFor="let teledata of teledata | paginate: { id: 'listing_pagination',
+              <tr *ngFor="let teledata of teledata | paginate: { id: 'listing_pagination',
         itemsPerPage: 7,
         currentPage: page,
         totalItems: totalRecords }">
-         
-            <td>{{teledata.telemetryid}}</td>
-            <td>{{teledata.deviceid}}</td>
-            <td>{{teledata.enqueuedtime}}</td>
-            <td>{{teledata.temperature}}</td>
-            <td>{{teledata.humidity}}</td>
-        </tr>
-    </tbody>
- </table>
- <br>
- <br>
- <div>
-  <pagination-controls class="a"  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
-</div>
- 
-  </div>
 
+                <td>{{teledata.telemetryid}}</td>
+                <td>{{teledata.deviceid}}</td>
+                <td>{{teledata.enqueuedtime}}</td>
+                <td>{{teledata.temperature}}</td>
+                <td>{{teledata.humidity}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <br>
+          <div>
+            <pagination-controls class="a" id="listing_pagination" maxSize="5" directionLinks="true"
+              (pageChange)="page = $event"></pagination-controls>
+          </div>
 
-
-
-
-
-  
+        </div>
